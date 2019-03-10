@@ -1,0 +1,27 @@
+{
+  "name": "mksign",
+  "version": "1.0.0",
+  "description": "create sign",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prjabuen/mksign.git"
+  },
+  "keywords": [
+    "create",
+    "sign"
+  ],
+  "author": "bugszhou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prjabuen/mksign/issues"
+  },
+  "homepage": "https://github.com/prjabuen/mksign#readme",
+  "dependencies": {
+    "js-sha256": "^0.9.0",
+    "lodash": "^4.17.11"
+  }
+}
