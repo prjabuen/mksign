@@ -10,13 +10,19 @@
  * @return  String
  */
 function _getSignStr(params = [[]]) {
-  let str = params.map(([key, val]) => {
+  const noKeys = [],
+    strArray = [];
+  params.forEach(([key, val]) => {
     if (val !== 0 && !val) {
       throw new Error(`param.${key} have not value! pls check!!`);
     }
-    return `${key}=${val}`;
+    if (key !== 0 && !key) {
+      noKeys.push(val);
+    } else {
+      strArray.push(`${key}=${val}`);
+    }
   });
-  return str.join('&');
+  return `${strArray.join('&')}${noKeys.join('')}`;
 }
 
 module.exports = _getSignStr;
