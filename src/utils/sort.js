@@ -24,4 +24,4 @@ function sort(params = {}) {
   });
 }
 
-module.exports = sort;
+export default sort;

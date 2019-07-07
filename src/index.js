@@ -7,7 +7,7 @@ const sha256 = require('js-sha256'),
   _getSignStr = require('./utils/_getSignStr'),
   defaultGetSignData = require('./defaultGetSignData');
 
-module.exports = {
+export default {
   defaultGetSignData,
   defaultSign(params = {}, lastParams = []) {
     const signStr = defaultGetSignData(params, lastParams);

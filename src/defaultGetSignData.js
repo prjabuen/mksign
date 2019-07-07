@@ -35,4 +35,4 @@ function defaultGetSignData(params = {}, lastParams = []) {
   return _getSignStr(filterData);
 };
 
-module.exports = defaultGetSignData;
+export default defaultGetSignData;

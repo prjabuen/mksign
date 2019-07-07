@@ -25,4 +25,4 @@ function _getSignStr(params = [[]]) {
   return `${strArray.join('&')}${noKeys.join('')}`;
 }
 
-module.exports = _getSignStr;
+export default _getSignStr;

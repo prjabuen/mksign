@@ -21,4 +21,4 @@ function filterNull(params = {}) {
   return tmp;
 }
 
-module.exports = filterNull;
+export default filterNull;
