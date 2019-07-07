@@ -1,4 +1,5 @@
 const path = require('path'),
+  { CleanWebpackPlugin } = require('clean-webpack-plugin'),
   TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
@@ -31,4 +32,7 @@ module.exports = {
       }),
     ],
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+  ],
 };
