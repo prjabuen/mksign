@@ -1,10 +1,8 @@
 /**
  * 参数字典排序
  */
-'use strict';
-
-const isObject = require('lodash/isObject'),
-  isEmpty = require('lodash/isEmpty');
+import isObject from 'lodash/isObject';
+import isEmpty from 'lodash/isEmpty';
 
 /**
  *

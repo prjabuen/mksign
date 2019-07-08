@@ -100,29 +100,34 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var js_sha256__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var js_sha256__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(js_sha256__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
+/* harmony import */ var _utils_filterNull__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(80);
+/* harmony import */ var _utils_getSignStr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(86);
+/* harmony import */ var _defaultGetSignData__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(116);
 
 
-var sha256 = __webpack_require__(1),
-    sort = __webpack_require__(5),
-    filterNull = __webpack_require__(80),
-    _getSignStr = __webpack_require__(86),
-    defaultGetSignData = __webpack_require__(116);
+
+
+
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  defaultGetSignData: defaultGetSignData,
+  defaultGetSignData: _defaultGetSignData__WEBPACK_IMPORTED_MODULE_4__["default"],
   defaultSign: function defaultSign() {
     var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
     var lastParams = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-    var signStr = defaultGetSignData(params, lastParams);
-    return sha256(signStr);
+    var signStr = Object(_defaultGetSignData__WEBPACK_IMPORTED_MODULE_4__["default"])(params, lastParams);
+    return js_sha256__WEBPACK_IMPORTED_MODULE_0___default()(signStr);
   },
   getFilterData: function getFilterData() {
     var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    return sort(filterNull(params));
+    return Object(_utils_sort__WEBPACK_IMPORTED_MODULE_1__["default"])(Object(_utils_filterNull__WEBPACK_IMPORTED_MODULE_2__["default"])(params));
   },
-  sort: sort,
-  filterNull: filterNull,
-  getSignStr: _getSignStr
+  sort: _utils_sort__WEBPACK_IMPORTED_MODULE_1__["default"],
+  filterNull: _utils_filterNull__WEBPACK_IMPORTED_MODULE_2__["default"],
+  getSignStr: _utils_getSignStr__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 
 /***/ }),
@@ -884,17 +889,20 @@ module.exports = __webpack_amd_options__;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_isObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(42);
+/* harmony import */ var lodash_isObject__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isObject__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(43);
+/* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
 
-var isObject = __webpack_require__(42),
-    isEmpty = __webpack_require__(43);
+
 
 function sort() {
   var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-  if (!isObject(params) || isEmpty(params)) {
+  if (!lodash_isObject__WEBPACK_IMPORTED_MODULE_1___default()(params) || lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2___default()(params)) {
     throw new Error('params is not Object or no value in sort function!');
   }
 
@@ -2620,17 +2628,20 @@ module.exports = nodeUtil;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_isObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(42);
+/* harmony import */ var lodash_isObject__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isObject__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(43);
+/* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
 
-var isObject = __webpack_require__(42),
-    isEmpty = __webpack_require__(43);
+
 
 function filterNull() {
   var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-  if (!isObject(params) || isEmpty(params)) {
+  if (!lodash_isObject__WEBPACK_IMPORTED_MODULE_1___default()(params) || lodash_isEmpty__WEBPACK_IMPORTED_MODULE_2___default()(params)) {
     throw new Error('params is not Object or no value in filterNull function!');
   }
 
@@ -3291,30 +3302,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_isObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(42);
+/* harmony import */ var lodash_isObject__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_isObject__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_isArray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(70);
+/* harmony import */ var lodash_isArray__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_isArray__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(43);
+/* harmony import */ var lodash_isEmpty__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_isEmpty__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5);
+/* harmony import */ var _utils_filterNull__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(80);
+/* harmony import */ var _utils_getSignStr__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(86);
 
 
 
 
 
-var isArray = __webpack_require__(70),
-    isObject = __webpack_require__(42),
-    isEmpty = __webpack_require__(43),
-    sort = __webpack_require__(5),
-    filterNull = __webpack_require__(80),
-    _getSignStr = __webpack_require__(86);
+
+
+
+
+
 
 function defaultGetSignData() {
   var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var lastParams = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-  var filterData = sort(filterNull(params));
+  var filterData = Object(_utils_sort__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(_utils_filterNull__WEBPACK_IMPORTED_MODULE_6__["default"])(params));
 
-  if (!isArray(lastParams)) {
+  if (!lodash_isArray__WEBPACK_IMPORTED_MODULE_3___default()(lastParams)) {
     throw new Error('The second argument is not Array or no value in defaultGetSignData function!');
   }
 
   lastParams.forEach(function (param) {
-    if (isObject(param)) {
-      if (!isObject(param) || isEmpty(param)) {
+    if (lodash_isObject__WEBPACK_IMPORTED_MODULE_2___default()(param)) {
+      if (!lodash_isObject__WEBPACK_IMPORTED_MODULE_2___default()(param) || lodash_isEmpty__WEBPACK_IMPORTED_MODULE_4___default()(param)) {
         throw new Error("The second argument's is not object or no value in defaultGetSignData function!");
       }
 
@@ -3333,7 +3352,7 @@ function defaultGetSignData() {
       filterData.push(['', param]);
     }
   });
-  return _getSignStr(filterData);
+  return Object(_utils_getSignStr__WEBPACK_IMPORTED_MODULE_7__["default"])(filterData);
 }
 
 ;

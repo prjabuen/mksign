@@ -1,11 +1,11 @@
 /**
  * 签名
  */
-const sha256 = require('js-sha256'),
-  sort = require('./utils/sort'),
-  filterNull = require('./utils/filterNull'),
-  _getSignStr = require('./utils/_getSignStr'),
-  defaultGetSignData = require('./defaultGetSignData');
+import sha256 from 'js-sha256';
+import sort from './utils/sort';
+import filterNull from './utils/filterNull';
+import _getSignStr from './utils/_getSignStr';
+import defaultGetSignData from './defaultGetSignData';
 
 export default {
   defaultGetSignData,

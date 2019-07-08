@@ -1,14 +1,12 @@
 /**
  * 获取默认签名字符串
  */
-
-
-const isArray = require('lodash/isArray'),
-  isObject = require('lodash/isObject'),
-  isEmpty = require('lodash/isEmpty'),
-  sort = require('./utils/sort'),
-  filterNull = require('./utils/filterNull'),
-  _getSignStr = require('./utils/_getSignStr');
+import isObject from 'lodash/isObject';
+import isArray from 'lodash/isArray';
+import isEmpty from 'lodash/isEmpty';
+import sort from './utils/sort';
+import filterNull from './utils/filterNull';
+import _getSignStr from './utils/_getSignStr';
 
 function defaultGetSignData(params = {}, lastParams = []) {
   let filterData = sort(filterNull(params));
