@@ -15,7 +15,7 @@ function sort(params = {}) {
   }
 
   return Object.entries(params).sort((pre, after) => {
-    if ((pre + '') > (after + '')){
+    if ((`${pre}`) > (`${after}`)) {
       return 1;
     }
     return -1;

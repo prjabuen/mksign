@@ -9,7 +9,7 @@ function filterNull(params = {}) {
     throw new Error('params is not Object or no value in filterNull function!');
   }
 
-  let tmp = {};
+  const tmp = {};
   Object.keys(params).forEach((key) => {
     const val = params[key];
     if (val === 0 || val) {

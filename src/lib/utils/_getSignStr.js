@@ -9,7 +9,7 @@
  * @example  [ ['val1', 2 ], [ 'val2', 5 ] ]
  * @return  String
  */
-function _getSignStr(params = [[]]) {
+function getSignStr(params = [[]]) {
   const noKeys = [],
     strArray = [];
   params.forEach(([key, val]) => {
@@ -25,4 +25,4 @@ function _getSignStr(params = [[]]) {
   return `${strArray.join('&')}${noKeys.join('')}`;
 }
 
-export default _getSignStr;
+export default getSignStr;

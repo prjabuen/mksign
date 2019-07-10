@@ -9,7 +9,7 @@ import filterNull from './utils/filterNull';
 import _getSignStr from './utils/_getSignStr';
 
 function defaultGetSignData(params = {}, lastParams = []) {
-  let filterData = sort(filterNull(params));
+  const filterData = sort(filterNull(params));
 
   if (!isArray(lastParams)) {
     throw new Error('The second argument is not Array or no value in defaultGetSignData function!');
@@ -31,6 +31,6 @@ function defaultGetSignData(params = {}, lastParams = []) {
     }
   });
   return _getSignStr(filterData);
-};
+}
 
 export default defaultGetSignData;
