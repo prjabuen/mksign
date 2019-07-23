@@ -56,7 +56,7 @@ let filterData = getFilterData({
     v3: null
 });
 
-console.log(filterData); // ['v1', 'v3']
+console.log(filterData); // ['v1']
 ```
 
 #### sort(data:object)
