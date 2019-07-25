@@ -1,6 +1,6 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('js-sha256')) :
-	typeof define === 'function' && define.amd ? define(['exports', 'js-sha256'], factory) :
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('hash.js/lib/hash/sha/256')) :
+	typeof define === 'function' && define.amd ? define(['exports', 'hash.js/lib/hash/sha/256'], factory) :
 	(global = global || self, (function () {
 		var current = global.mksign;
 		var exports = global.mksign = {};
@@ -1621,7 +1621,7 @@
 
 	function defaultGetSignData(){var params=0<arguments.length&&void 0!==arguments[0]?arguments[0]:{},lastParams=1<arguments.length&&void 0!==arguments[1]?arguments[1]:[],filterData=sort(filterNull(params));if(!isArray_1(lastParams))throw new Error("The second argument is not Array or no value in defaultGetSignData function!");return lastParams.forEach(function(param){if(isObject_1(param)){if(!isObject_1(param)||isEmpty_1(param))throw new Error("The second argument's is not object or no value in defaultGetSignData function!");entries$1(param).forEach(function(_ref){var _ref2=slicedToArray(_ref,2),key=_ref2[0],val=_ref2[1];filterData.push([key,val]);});}else{if(0!==param&&!param)throw new Error("The second argument's no value in defaultGetSignData function!");filterData.push(["",param]);}}),getSignStr(filterData)}
 
-	function defaultSign(){var params=0<arguments.length&&arguments[0]!==void 0?arguments[0]:{},lastParams=1<arguments.length&&arguments[1]!==void 0?arguments[1]:[],signStr=defaultGetSignData(params,lastParams);return sha256(signStr)}function getFilterData(){var params=0<arguments.length&&arguments[0]!==void 0?arguments[0]:{};return sort(filterNull(params))}
+	function defaultSign(){var params=0<arguments.length&&arguments[0]!==void 0?arguments[0]:{},lastParams=1<arguments.length&&arguments[1]!==void 0?arguments[1]:[],signStr=defaultGetSignData(params,lastParams);return sha256().update(signStr).digest("hex")}function getFilterData(){var params=0<arguments.length&&arguments[0]!==void 0?arguments[0]:{};return sort(filterNull(params))}
 
 	exports.defaultGetSignData = defaultGetSignData;
 	exports.defaultSign = defaultSign;
