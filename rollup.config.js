@@ -5,7 +5,7 @@ import babel from 'rollup-plugin-babel';
 import { terser } from "rollup-plugin-terser";
 
 export default {
-  external: ['js-sha256', 'lodash'],
+  external: ['hash.js', 'lodash'],
   input: 'src/entry/index.js',
   output: [
     {
