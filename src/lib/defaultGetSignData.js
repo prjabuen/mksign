@@ -4,6 +4,7 @@
 import isObject from 'lodash/isObject';
 import isArray from 'lodash/isArray';
 import isEmpty from 'lodash/isEmpty';
+import toPairs from 'lodash.topairs';
 import sort from './utils/sort';
 import filterNull from './utils/filterNull';
 import _getSignStr from './utils/_getSignStr';
@@ -20,7 +21,7 @@ function defaultGetSignData(params = {}, lastParams = []) {
         throw new Error(`The second argument's is not object or no value in defaultGetSignData function!`);
       }
 
-      Object.entries(param).forEach(([key, val]) => {
+      toPairs(param).forEach(([key, val]) => {
         filterData.push([key, val]);
       });
     } else {

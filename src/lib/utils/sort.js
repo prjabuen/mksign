@@ -3,6 +3,7 @@
  */
 import isObject from 'lodash/isObject';
 import isEmpty from 'lodash/isEmpty';
+import toPairs from 'lodash.topairs';
 
 /**
  *
@@ -14,7 +15,7 @@ function sort(params = {}) {
     throw new Error('params is not Object or no value in sort function!');
   }
 
-  return Object.entries(params).sort((pre, after) => {
+  return toPairs(params).sort((pre, after) => {
     if ((`${pre}`) > (`${after}`)) {
       return 1;
     }
