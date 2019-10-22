@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import { terser } from "rollup-plugin-terser";
+import miniprogram from 'rollup-plugin-miniprogram';
 
 export default {
   input: 'src/entry/index.js',
@@ -23,8 +24,17 @@ export default {
       strict: true,
       noConflict: true,
     },
+    {
+      name: 'mksign',
+      file: 'dist/mksign.miniprogram.js',
+      format: 'umd',
+      sourcemap: true,
+      strict: true,
+      noConflict: true,
+    },
   ],
   plugins: [
+    miniprogram(),
     resolve(),
     commonjs(),
     babel({
